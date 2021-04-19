@@ -14,7 +14,7 @@ body{
 :root{
     --size-default:9rem;
 }
-.container{
+.board{
     
     width: var(--size-default)*3;
     height: var(--size-default)*3;
@@ -24,7 +24,7 @@ body{
     grid-template-rows: repeat(3,1fr);
 }
 
-.pieces{
+.piece{
     width: var(--size-default);
     height: var(--size-default);
     background-color: brown;
@@ -44,3 +44,4 @@ body{
     content:"\2694";
     font-size: var(--size-default);
 }
+
