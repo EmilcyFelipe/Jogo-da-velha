@@ -1,20 +1,25 @@
 document.addEventListener('DOMContentLoaded',()=>{
 
+    let piece = document.querySelectorAll('.piece');
+    
+    piece.forEach((piece) =>{
+        piece.addEventListener('click', handleClick);
+    })
 
-let piece = document.querySelectorAll('.piece');
-    piece.forEach((piece) => {
-    piece.addEventListener('click',handleClick);
 });
 
-});
- let count=0;
 function handleClick(event){
-    count++;
-    if(count%2==0){
-        event.target.classList.add("show-face-shield");
+    handleMove(event.target.id);
+    updateBoard();
+}
+
+function updateBoard(){
+    let pieces = document.querySelectorAll('.piece');
+    
+    if(board[event.target.id]=="o"){
+        console.log(event.target.id);
+        pieces[event.target.id].classList.add("show-face-shield");
     }else{
-        event.target.classList.add("show-face-sword");
-
-}}
-
-
+        pieces[event.target.id].classList.add("show-face-sword");
+}
+}
