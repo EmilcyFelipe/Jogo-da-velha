@@ -15,7 +15,7 @@ body{
     --size-default:9rem;
 }
 .board{
-    
+    position: relative;
     width: var(--size-default)*3;
     height: var(--size-default)*3;
     background-color: beige;
@@ -43,5 +43,34 @@ body{
 .show-face-sword:after{
     content:"\2694";
     font-size: var(--size-default);
+}
+
+
+.show-winner:after{
+    justify-self: center;
+    content:"Congratulations! You won";
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background-clip:content-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0%;
+    animation: winnerMove 1s forwards;
+    
+    top: 5rem;
+}
+
+@keyframes winnerMove {
+    0%{
+        transform: translateY(20rem) ;
+    }
+    100%{
+        transform: translateY(0);
+        font-size: 6rem;
+        opacity: 1;
+    }
+    
 }
 

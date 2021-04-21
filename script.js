@@ -17,10 +17,16 @@ function updateBoard(){
     let pieces = document.querySelectorAll('.piece');
     
     if(board[event.target.id]=="o"){
-        console.log(event.target.id);
         pieces[event.target.id].classList.add("show-face-shield");
-    }else{
+    }else if(board[event.target.id]=="x"){
         pieces[event.target.id].classList.add("show-face-sword");
+    }
+    else{
+        return;
+
+    }
+    
 }
-    winner();
-}
+
+
+
