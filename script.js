@@ -22,4 +22,5 @@ function updateBoard(){
     }else{
         pieces[event.target.id].classList.add("show-face-sword");
 }
+    winner();
 }
